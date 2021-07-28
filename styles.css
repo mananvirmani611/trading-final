@@ -1,0 +1,297 @@
+#section-0{
+  background-color: #222222;
+  position: fixed;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 0;
+}
+div.container-fluid{
+  background-color: #222222;
+}
+.container-0{
+  padding: 0 5% 0 10%;
+}
+body{
+
+}
+#get-started-button{
+  background-color: #0facf3;
+  border: 0;
+  padding: 4px 5px;
+  width:210px;
+  color: lightgray;
+  font-weight: bold;
+
+  border-radius: 2px;
+}
+#login-button{
+  background-color: #222222;
+  border: 1px solid #0facf3;
+  color:#0facf3;
+  padding: 4px 10px;
+    font-weight: bold;
+  border-radius: 2px;
+}
+.nav-link{
+  color: lightgray!important;
+  font-weight: bold;
+  margin: 0 20px;
+}
+.front-section{
+  text-align: center;
+  background: #222222;
+  padding: 15% 0 20% 0;
+
+  font-family: 'Ubuntu', sans-serif;
+}
+.front-inner{
+
+}
+.container{
+  padding: 0 20% !important;
+  color: white;
+}
+#main-heading{
+  font-weight: bold;
+font-family: 'Dosis', sans-serif;
+}
+.blue-color{
+  color:  #0facf3;
+}
+.btn.get-started-button-2{
+    background-color: #0facf3;
+    margin-top: 60px;
+    padding: 10px 28px;
+    border-radius: 30px;
+}
+.center{
+  text-align: center;
+}
+.right{
+  text-align: right;
+}
+.left{
+  text-align: left;
+}
+
+#section-2{
+  padding:10% 0;
+  text-align: center;
+}
+.right-div{
+  padding: 5%;
+  padding-left: 2%!important;
+  padding-right: 10%!important;
+}
+#main-heading-2{
+  margin:10px 0;
+}
+.left-div{
+  padding-right: 50px !important;
+}
+.btn.account-button{
+  background-color: #0facf3;
+  margin-top: 10px;
+  padding: 10px 28px;
+  border-radius: 30px;
+}
+.description{
+    font-family: 'Ubuntu', sans-serif;
+    font-size:17px;
+}
+.container-2{
+  padding: 0 13%;
+}
+.key-features-1{
+  padding: 50px 0;
+}
+.features-1-right{
+  padding: 7% 0;
+  font-size: 17px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.features-1-left{
+  padding:4% 0;
+  padding-right:5%!important;
+}
+.key-features-2{
+  padding: 50px 0;
+}
+
+.features-2-right{
+  padding: 2% 0;
+  padding-right: 4%!important;
+  font-size: 17px;
+  padding-left: 0!important;
+
+}
+.features-2-left{
+font-family: 'Ubuntu', sans-serif;
+  padding:4% 0;
+  padding-right:2%!important;
+}
+
+.key-features-3{
+  padding: 50px 0;
+}
+.features-3-right{
+  padding: 7% 0;
+  font-size: 17px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.features-3-left{
+  padding:7% 0;
+  padding-right:5%!important;
+}
+.container-3{
+  padding: 10% 13%;
+}
+#section-3{
+  background-color: #F9F8F9;
+  text-align: center;
+}
+.row-1{
+  margin-top: 50px!important;
+  margin-bottom: 70px;
+}
+
+.row-2{
+  margin-top: 50px!important;
+  margin-bottom: 70px;
+}
+
+#section-4{
+  text-align: center;
+}
+.container-4{
+  padding: 10% 13%;
+}
+.checked {
+  color: orange;
+}
+.section-4-left-div{
+  text-align: left;
+}
+
+.btn.review-button{
+    background-color: #0facf3;
+    margin-top: 10px;
+    padding: 10px 28px;
+    border-radius: 30px;
+}
+
+#section-5{
+    text-align: center;
+    background: #222222;
+    color: lightgray;
+}
+.container-5{
+    padding: 10% 13%;
+}
+#section-6{
+  text-align: left;
+}
+.container-6{
+    padding: 6% 13% 20px 13%;
+}
+.btn.get-started-button{
+  background-color: #46da60;
+  margin-top: 10px;
+  padding: 13px 32px;
+  border: 0;
+  border-radius: 30px;
+}
+.icon{
+  margin: 0 7px;
+}
+.names{
+  margin-top: 10px;
+}
+.leftmost{
+    text-align: left;
+}
+.centermost{
+text-align: center;
+}
+.rightmost{
+  text-align: right;
+}
+@media screen and (max-width: 992px) {
+  .features-1-left{
+    text-align: center!important;
+  }
+  .features-2-right{
+    text-align: center!important;
+  }
+  .features-3-left{
+    text-align: center!important;
+  }
+  .features-4-right{
+    text-align: center!important;
+  }
+  .stock{
+    margin:40px 0;
+  }
+  .leftmost{
+      text-align: center;
+      margin: 10px 0;
+  }
+  .centermost{
+  text-align: center;
+  margin: 10px 0;
+  }
+  .rightmost{
+    text-align: center;
+    margin: 20px 0;
+  }
+  .front-section{
+    padding-top:160px;
+  }
+}
+
+
+
+/* external css: flickity.css */
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.carousel {
+}
+
+.carousel-cell {
+  height: 0;
+  margin-right: 50px;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+
+.carousel-cell.is-selected {
+  background: #ED2;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(carousel-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+/* fade in lazy loaded image */
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
+}
+div.carousel{
+  z-index: 0;
+}
+#section-0{
+  z-index:200;
+}
+
+.txt-type > .txt {
+  border-right: 0.2rem solid #777;
+}

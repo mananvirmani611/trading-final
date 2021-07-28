@@ -1,0 +1,40 @@
+body{
+background-color: #222222 !important;
+  }
+.container-table{
+  padding: 3% 8%;
+}
+.inner-container-table{
+  padding: 1% !important;
+  background-color: #555555;
+}
+#trading-stats-button{
+  margin: 0 !important;
+  border-radius: 0;
+}
+#account-info-button{
+  margin:0 !important;
+  border-radius: 0;
+}
+.hidden{
+  display: none;
+}
+.black-border{
+  border: 4px solid white;
+}
+.container-top{
+  padding: 4% 8% 0 8%;
+}
+.left-top-div{
+  background-color: #555555;
+  padding:2% 2% !important;
+  color: white;
+  font-size: 13px;
+}
+.right-top-div{
+  background-color: #555555;
+}
+.middle-top-div{
+  background-color: #555555;
+  text-align: center;
+}

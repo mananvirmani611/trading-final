@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./DataTables/datatables.min.css">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/1.0.4/css/dataTables.responsive.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+  <div class="container-top">
+      <div class="row" style="margin:0 !important">
+        <div class="col-lg-3 left-top-div">
+                  <h3>Alan Main</h3>
+                  Growth
+                  <h5>235.78 %</h5>
+                  Profit/Loss
+                  <h5 id="profit/loss">2,392.71 GBP</h5>
+                  Balance
+                  <h5 id="balance-top">8,606.83 GBP</h5>
+                  Equity
+                  <h5>8,451.90 GBP</h5>
+                  Equity %
+                  <h5>98.2</h5>
+        </div>
+        <div class="col-lg-1 middle-top-div">
+            <div class="" style="width:50%; height:100%; background-color:#222222;">
+            </div>
+        </div>
+        <div class="col-lg-8 right-top-div">
+          <div class="graphs">
+            <div class="center">
+              <select name="sources" id="sources" placeholder='Growth' class="custom-select sources">
+                <option value="growth" selected>Growth</option>
+                <option value="balance">Balance</option>
+                <option value="profit">Profit</option>
+              </select>
+            </div>
+            <div class="graph">
+              <canvas id="profit"></canvas>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+
+
+
+
+
+
+  <div class="container-table">
+    <div class="inner-container-table">
+      <button type="button" class="btn btn-light" id="trading-stats-button" name="button">Trading Stats</button>
+      <button type="button" class="btn btn-light" id="account-info-button" name="button">Account Info</button>
+      <table class="table table-hover table-dark black-border" id="table-1">
+      <tr>
+      <th scope="col">Total Trades</th>
+      <td colspan="2" id="total-trades">1,269</td>
+      <th scope="col">Longs Won</th>
+      <td scope="col">304 of 522</td>
+      </tr>
+      <tr>
+      <th scope="row">Win %</th>
+      <td colspan="2" id="win-percentage">62.33% 791 of 1,269</td>
+      <th scope="col">Shorts Won</th>
+      <td scope="col">487 of 747</td>
+      </tr>
+      <tr>
+      <th scope="row">Commissions</th>
+      <td colspan="2">-410.86 GBP</td>
+      <th scope="col">Average Win</th>
+      <td scope="col" id="avg-win">19.89 GBP</td>
+      </tr>
+      <tr>
+      <th scope="row">Loss %</th>
+      <td colspan="2" id="loses-percentage">37.67% 478 of 1,269</td>
+      <th scope="col">Best Trade</th>
+      <td scope="col" id="best-trade">145.65 GBP (Jul 21)</td>
+      </tr>
+
+      <tr>
+      <th scope="row">Lots</th>
+      <td colspan="2" id="lots">100.50</td>
+      <th scope="col">Worst Trade</th>
+      <td scope="col" id="worst-trade">-169.67 GBP (May 21)</td>
+      </tr>
+      <tr>
+      <th scope="row">Swap</th>
+      <td colspan="2" id="swap">-356.83 GBP</td>
+      <th scope="col">Average Loss</th>
+      <td scope="col" id="avg-loss">-27.91 GBP</td>
+      </tr>
+      <table class="table table-hover table-dark hidden black-border" id="table-2" >
+      <tr>
+      <th scope="col">Balance</th>
+      <td colspan="2" id="balance">8,606.83 GBP</td>
+      <th scope="col">Broker</th>
+      <td scope="col">Darwinex</td>
+      </tr>
+      <tr>
+      <th scope="row">Deposits</th>
+      <td colspan="2" id="deposits">6,214.12 GBP</td>
+      <th scope="col">Broker Server</th>
+      <td scope="col">Darwinex-Live</td>
+      </tr>
+      <tr>
+      <th scope="row">Withdrawals</th>
+      <td colspan="2">0.00 GBP</td>
+      <th scope="col">Leverage</th>
+      <td scope="col"></td>
+      </tr>
+      <tr>
+        <th scope="row"></th>
+        <td colspan="2"></td>
+        <th scope="col">Account Type</th>
+        <td scope="col"></td>
+      </tr>
+      </table>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="site-wrapper">
+    <section class="tabs-wrapper">
+      <div class="tabs-container">
+        <div class="tabs-block">
+          <div class="tabs">
+            <input type="radio" name="tabs" id="tab1" checked="checked" />
+            <label for="tab1"><span class="material-icons">
+              date_range
+              </span> Monthly</label>
+            <div class="tab">
+              <div class="center">
+                <select id="input-month" class="dropdown">
+                  <option value="2021" selected>2021</option>
+                  <option value="2020" >2020</option>
+                  <option value="2019" >2019</option>
+                  <option value="2018" >2018</option>
+                </select>
+              </div>
+              <figure class="highcharts-figure">
+                <div id="month"></div>
+              </figure>
+              <figure class="highcharts-figure pie">
+                <div id="pie"></div>
+              </figure>
+
+            </div>
+
+            <input type="radio" name="tabs" id="tab2" />
+            <label for="tab2"><span class="material-icons"> hourglass_empty </span> Daily</label>
+            <div class="tab">
+              <div class="center">
+                <select id="input-daily" class="dropdown">
+                  <option value="win" selected>Win vs Loss</option>
+                  <option value="buy" >Buy vs Sell</option>
+                </select>
+              </div>
+              <figure class="highcharts-figure">
+                <div id="days"></div>
+              </figure>
+            </div>
+
+            <input type="radio" name="tabs" id="tab3" />
+            <label for="tab3"><svg class="svg-icon" style="font-weight:bold; width: 1.5em; height: 1.5em;vertical-align: middle;fill: currentColor;overflow: hidden; margin-right:8px;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M482.114859 960.053887C247.662163 944.61417 63.99936 748.057287 63.99936 512.525307 63.99936 265.217444 264.96759 63.99936 511.99488 63.99936s447.99552 201.218084 447.99552 448.525947a455.757362 455.757362 0 0 1-3.97308 59.968936q-1.99678 15.046506-4.99707 29.781718a31.991488 31.991488 0 0 0 62.688653 12.81216q3.471325-16.877399 5.754822-34.123435a520.788904 520.788904 0 0 0 4.526035-68.439379C1023.98976 229.904133 794.308857 0 511.99488 0S0 229.904133 0 512.525307c0 269.124989 209.938381 493.745335 477.936981 511.400966 0.716793 0.03072 1.392626 0.063487 2.129898 0.063487a32.001728 32.001728 0 0 0 2.04798-63.935873z m-216.737673-201.437217a31.975104 31.975104 0 0 0 45.239868 0L511.99488 557.255227l73.379106 73.372963a31.991488 31.991488 0 1 0 45.239868-45.24806L557.255227 511.99488l41.369187-41.369186a31.99968 31.99968 0 0 0-45.260348-45.24806l-41.369186 41.369187-41.369186-41.369187a31.99968 31.99968 0 1 0-45.260348 45.24806l41.369187 41.369186-201.357347 201.37373a31.962816 31.962816 0 0 0 0 45.24806z m630.613854-214.628254v-63.99936h-63.99936v63.99936h63.99936zM480.00544 127.99872v63.99936h63.97888V127.99872h-63.97888zM191.99808 543.99456v-63.99936H127.99872v63.99936h63.99936zM736.00288 959.9904h-59.657643c41.676383-47.343143 89.742463-104.651753 89.742462-158.935499 0-27.999976-9.625504-52.813296-27.156208-69.875013a95.99904 95.99904 0 0 0-162.937251 68.812112 31.99968 31.99968 0 1 0 63.99936 0 31.99968 31.99968 0 0 1 54.312417-22.937371c4.935631 4.812752 7.782322 13.56172 7.782322 24.000272 0 33.126069-48.537115 88.063119-80.649433 124.437284-16.568154 18.747205-30.842572 34.903715-40.05848 48.741913a31.993536 31.993536 0 0 0 26.623734 49.749518h127.99872a31.99968 31.99968 0 0 0 0-63.993216z m255.99744-63.99936v-159.9984a31.985344 31.985344 0 0 0-32.00992-31.99968h-32.00992a31.983296 31.983296 0 0 0-28.610274 17.686351l-96.00928 191.99808a32.02016 32.02016 0 0 0 28.630754 46.313009h95.9888v31.99968a32.00992 32.00992 0 0 0 64.01984 0V959.9904a31.99968 31.99968 0 0 0 0-63.99936z m-108.235718 0l44.215878-88.4379V895.99104h-44.215878z"  /></svg> Hourly</label>
+            <div class="tab">
+              <div class="center">
+                <select id="input-hour" class="dropdown">
+                  <option value="win" selected>Win vs Loss</option>
+                  <option value="buy" >Buy vs Sell</option>
+                </select>
+              </div>
+              <figure class="highcharts-figure">
+                <div id="hours"></div>
+              </figure>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+
+
+
+
+
+
+
+  <div id="highchart">
+
+  </div>
+
+  <!-- <h2>DataTable</h2> -->
+  <div class="container" style="padding:3%; width:100%!important; margin:0!important; padding:3%!important; font-size:10px !important;">
+      <div class="row">
+          <div class="col-lg-10">
+              <table id="table" class="table table-hover table-light" style="width:100%!important; font-size:18px !important;">
+                  <thead>
+                      <tr>
+                          <th class='footable-visible footable-first-column'>Ticket</th>
+                          <th>Open Time</th>
+                          <th>Symbol</th>
+                          <th>Type</th>
+                          <th>Lots</th>
+                          <th>Open Price</th>
+                          <th>Stop Loss</th>
+                          <th>Take Profit</th>
+                          <th>Close Time</th>
+                          <th>Close Price</th>
+                          <th>Com</th>
+                          <th>Swap</th>
+                          <th>P/L</th>
+                      </tr>
+                  </thead>
+              </table>
+          </div>
+      </div>
+  </div>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js "></script>
+<script type="text/javascript" charset="utf8" src="./DataTables/datatables.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/1.0.4/js/dataTables.responsive.js "></script>
+
+<script src="package/dist/chart.min.js"></script>
+
+<script>
+  $(".custom-select").each(function () {
+    var classes = $(this).attr("class"),
+      id = $(this).attr("id"),
+      name = $(this).attr("name");
+    var template = '<div class="' + classes + '">';
+    template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
+    template += '<div class="custom-options">';
+    $(this).find("option").each(function () {
+      template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+    });
+    template += '</div></div>';
+
+    $(this).wrap('<div class="custom-select-wrapper"></div>');
+    $(this).hide();
+    $(this).after(template);
+  });
+  $(".custom-option:first-of-type").hover(function () {
+    $(this).parents(".custom-options").addClass("option-hover");
+  }, function () {
+    $(this).parents(".custom-options").removeClass("option-hover");
+  });
+  $(".custom-select-trigger").on("click", function () {
+    $('html').one('click', function () {
+      $(".custom-select").removeClass("opened");
+    });
+    $(this).parents(".custom-select").toggleClass("opened");
+    event.stopPropagation();
+  });
+  $(".custom-option").on("click", function () {
+    $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
+    $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
+    $(this).addClass("selection");
+    $(this).parents(".custom-select").removeClass("opened");
+    $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+    changeGraph($(this).text());
+
+  });
+</script>
+
+
+
+
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+
+
+
+
+<script src="app.js "></script>
+
+<script src="index.js "></script>
+
+
+
+</html>
+
+</html>
