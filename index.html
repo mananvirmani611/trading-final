@@ -22,31 +22,31 @@
   <div class="container-top">
       <div class="row" style="margin:0 !important">
         <div class="col-lg-3 left-top-div">
-                  <h3>Alan Main</h3>
-                  Growth
-                  <h5>235.78 %</h5>
-                  Profit/Loss
-                  <h5 id="profit/loss">2,392.71 GBP</h5>
-                  Balance
-                  <h5 id="balance-top">8,606.83 GBP</h5>
-                  Equity
-                  <h5>8,451.90 GBP</h5>
-                  Equity %
-                  <h5>98.2</h5>
+                  <h1>Alan Main</h1>
+                  <h6>Growth</h6>
+                  <h3>235.78 %</h3>
+                  <h6>Profit/Loss</h6>
+                  <h3 id="profit/loss">2,392.71 GBP</h3>
+                  <h6>Balance</h6>
+                  <h3 id="balance-top">8,606.83 GBP</h3>
+                  <h6>Equity</h6>
+                  <h3>8,451.90 GBP</h3>
+                  <h6>Equity %</h6>
+                  <h3>98.2</h3>
         </div>
-        <div class="col-lg-1 middle-top-div">
+        <!-- <div class="col-lg-1 middle-top-div">
             <div class="" style="width:50%; height:100%; background-color:#222222;">
             </div>
-        </div>
-        <div class="col-lg-8 right-top-div">
-          <div class="graphs">
-            <div class="center">
+        </div> -->
+        <div class="col-lg-9 right-top-div">
+          <div class="graphs" style="padding: 10px;">
+            <!-- <div class="center"> -->
               <select name="sources" id="sources" placeholder='Growth' class="custom-select sources">
                 <option value="growth" selected>Growth</option>
                 <option value="balance">Balance</option>
                 <option value="profit">Profit</option>
               </select>
-            </div>
+            <!-- </div> -->
             <div class="graph">
               <canvas id="profit"></canvas>
             </div>
@@ -189,9 +189,11 @@
                   <option value="buy" >Buy vs Sell</option>
                 </select>
               </div>
-              <figure class="highcharts-figure">
-                <div id="hours"></div>
-              </figure>
+              <div class="row">
+                <figure class="highcharts-figure" style="text-align:center; margin:0; width:100%;" >
+                  <div id="hours" style="width:150%;"></div>
+                </figure>
+              </div>
             </div>
 
           </div>

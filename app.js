@@ -64,6 +64,7 @@ function formatDate(str) {
 function makeTable(Data) {
   $('#table').DataTable({
     data: Data,
+    responsive:true,
     columns: [
       { data: 'Ticket' },
       { data: 'Open Date' },
@@ -103,19 +104,19 @@ function makeTable(Data) {
   var loseTotal = 0;
 
   for(var i = 0; i<Data.length-1; i++){
-      var profit = Data[i].profit;
+      var profit = Data[i].Profit;
       balance = balance + profit;
       if(profit > maxprofit){
         maxprofit = profit;
-        maxprofitdate = Data[i].opendate;
+        maxprofitdate = Data[i]['Open Date'];
       }
       if(profit<minprofit){
         minprofit = profit;
-        minprofitdate = Data[i].opendate;
+        minprofitdate = Data[i]['Open Date'];
       }
 
       swap = swap + Data[i].Swap;
-      lots = lots + Data[i].UnitsLots;
+      lots = lots + Data[i]["Units/Lots"];
       if(profit > 0){
         winTotal = winTotal + profit;
         wins++;
@@ -127,6 +128,8 @@ function makeTable(Data) {
   }
   console.log("max profit is " + maxprofit);
   var totalWinsLoses = loses + wins;
+  let gbp =(balance/Data.length).toFixed(2) +  " GBP";
+console.log(gbp);
   document.getElementById("balance").innerHTML = (balance/Data.length).toFixed(2) +  " GBP";
   document.getElementById("balance-top").innerHTML = (balance/Data.length).toFixed(2) +  " GBP";
   document.getElementById("profit/loss").innerHTML = (balance/Data.length).toFixed(2) +  " GBP";
@@ -220,9 +223,7 @@ function makeGraph(allDate, Profit) {
         title: {
           display: true,
           text: 'Growth',
-          font: {
-            size: 40,
-          }
+
         }
       },
       scales: {
