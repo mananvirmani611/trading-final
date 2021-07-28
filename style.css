@@ -472,10 +472,11 @@ text > tspan{
 
 .dropdown {
   background: rgb(68, 67, 67);
+  background-color: white;
   width: fit-content;
   height: 32px;
   border-radius: 5px;
-  font-size: 12px;
+  font-size: 18px;
   padding-left: 10px;
   outline: none;
 }
