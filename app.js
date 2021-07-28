@@ -419,7 +419,7 @@ function makeMonthlyChart(data, year) {
       pointStart: Date.UTC(year, 0),
       pointInterval: 30 * 24 * 36e5,
       color: '#0088FF',
-      negativeColor: '#FF0000'
+      negativeColor: 'red'
     }]
   });
 }
@@ -530,7 +530,7 @@ function makePieChart(data) {
 
 
 Highcharts.theme = {
-  colors: ['#058DC7', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572',
+  colors: ['	#32cd32', 'red', '#ED561B', '#DDDF00', '#24CBE5', '#64E572',
     '#FF9655', '#FFF263', '#6AF9C4'],
   chart: {
     backgroundColor: "#000"
