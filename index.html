@@ -14,55 +14,10 @@
   <link rel="stylesheet" href="https://cdn.datatables.net/responsive/1.0.4/css/dataTables.responsive.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-
-
-  <div class="container-top">
-      <div class="row" style="margin:0 !important">
-        <div class="col-lg-3 left-top-div">
-                  <h1>Alan Main</h1>
-                  <h6>Growth</h6>
-                  <h3>235.78 %</h3>
-                  <h6>Profit/Loss</h6>
-                  <h3 id="profit/loss">2,392.71 GBP</h3>
-                  <h6>Balance</h6>
-                  <h3 id="balance-top">8,606.83 GBP</h3>
-                  <h6>Equity</h6>
-                  <h3>8,451.90 GBP</h3>
-                  <h6>Equity %</h6>
-                  <h3>98.2</h3>
-        </div>
-        <!-- <div class="col-lg-1 middle-top-div">
-            <div class="" style="width:50%; height:100%; background-color:#222222;">
-            </div>
-        </div> -->
-        <div class="col-lg-9 right-top-div">
-          <div class="graphs" style="padding: 10px;">
-            <!-- <div class="center"> -->
-              <select name="sources" id="sources" placeholder='Growth' class="custom-select sources">
-                <option value="growth" selected>Growth</option>
-                <option value="balance">Balance</option>
-                <option value="profit">Profit</option>
-              </select>
-            <!-- </div> -->
-            <div class="graph">
-              <canvas id="profit"></canvas>
-            </div>
-
-
-          </div>
-        </div>
-      </div>
-  </div>
-
-
-
-
-
-
-
 
   <div class="container-table">
     <div class="inner-container-table">
@@ -123,17 +78,67 @@
       <th scope="row">Withdrawals</th>
       <td colspan="2">0.00 GBP</td>
       <th scope="col">Leverage</th>
-      <td scope="col"></td>
+      <td scope="col"><i style="font-size:24px" class="fa">&#xf023;</i></td>
       </tr>
       <tr>
         <th scope="row"></th>
         <td colspan="2"></td>
         <th scope="col">Account Type</th>
-        <td scope="col"></td>
+        <td scope="col"><i style="font-size:24px" class="fa">&#xf023;</i></td>
       </tr>
       </table>
     </div>
   </div>
+
+
+
+
+  <div class="container-top">
+      <div class="row" style="margin:0 !important">
+        <div class="col-lg-3 left-top-div">
+                  <h1>Alan Main</h1>
+                  <h6>Growth</h6>
+                  <h3>235.78 %</h3>
+                  <h6>Profit/Loss</h6>
+                  <h3 id="profit/loss">2,392.71 GBP</h3>
+                  <h6>Balance</h6>
+                  <h3 id="balance-top">8,606.83 GBP</h3>
+                  <h6>Equity</h6>
+                  <h3>8,451.90 GBP</h3>
+                  <h6>Equity %</h6>
+                  <h3>98.2</h3>
+        </div>
+        <!-- <div class="col-lg-1 middle-top-div">
+            <div class="" style="width:50%; height:100%; background-color:#222222;">
+            </div>
+        </div> -->
+        <div class="col-lg-9 right-top-div">
+          <div class="graphs" style="padding: 10px;">
+            <!-- <div class="center"> -->
+              <select name="sources" id="sources" placeholder='Growth' class="custom-select sources">
+                <option value="growth" selected>Growth</option>
+                <option value="balance">Balance</option>
+                <option value="profit">Profit</option>
+              </select>
+            <!-- </div> -->
+            <div class="graph">
+              <canvas id="profit"></canvas>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+
+
+
+
+
+
+
 
 
 
