@@ -131,8 +131,8 @@ function makeTable(Data) {
   let gbp =(balance/Data.length).toFixed(2) +  " GBP";
 console.log(gbp);
   document.getElementById("balance").innerHTML = (balance/Data.length).toFixed(2) +  " GBP";
-  document.getElementById("balance-top").innerHTML = (balance/Data.length).toFixed(2) +  " GBP";
-  document.getElementById("profit/loss").innerHTML = (balance/Data.length).toFixed(2) +  " GBP";
+  // document.getElementById("balance-top").innerHTML = (balance/Data.length).toFixed(2) +  " GBP";
+  // document.getElementById("profit/loss").innerHTML = (balance/Data.length).toFixed(2) +  " GBP";
   document.getElementById("win-percentage").innerHTML = ((wins/(wins+loses))*100).toFixed(2) + "% of " +totalWinsLoses ;
   document.getElementById("loses-percentage").innerHTML = ((loses/(wins+loses))*100).toFixed(2) + "% of " +totalWinsLoses ;
   // document.getElementById("best-trade").innerHTML = maxprofit + " GBP " + "(" + maxprofitdate.substring(0, 10) + ")";
