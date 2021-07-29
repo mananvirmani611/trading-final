@@ -21,9 +21,38 @@
 
   <div class="container-table">
     <div class="inner-container-table">
-      <button type="button" class="btn btn-light" id="trading-stats-button" name="button">Trading Stats</button>
       <button type="button" class="btn btn-light" id="account-info-button" name="button">Account Info</button>
-      <table class="table table-hover table-dark black-border" id="table-1">
+      <button type="button" class="btn btn-light" id="trading-stats-button" name="button">Trading Stats</button>
+
+      <table class="table table-hover table-dark black-border" id="table-2" >
+      <tr>
+      <th scope="col">Balance</th>
+      <td colspan="2" id="balance">8,606.83 GBP</td>
+      <th scope="col">Broker</th>
+      <td scope="col">Darwinex</td>
+      </tr>
+      <tr>
+      <th scope="row">Deposits</th>
+      <td colspan="2" id="deposits">6,214.12 GBP</td>
+      <th scope="col">Broker Server</th>
+      <td scope="col">Darwinex-Live</td>
+      </tr>
+      <tr>
+      <th scope="row">Withdrawals</th>
+      <td colspan="2">0.00 GBP</td>
+      <th scope="col">Leverage</th>
+      <td scope="col"><i style="font-size:24px" class="fa">&#xf023;</i></td>
+      </tr>
+      <tr>
+        <th scope="row"></th>
+        <td colspan="2"></td>
+        <th scope="col">Account Type</th>
+        <td scope="col"><i style="font-size:24px" class="fa">&#xf023;</i></td>
+      </tr>
+      </table>
+
+
+      <table class="table table-hover table-dark black-border hidden" id="table-1">
       <tr>
       <th scope="col">Total Trades</th>
       <td colspan="2" id="total-trades">1,269</td>
@@ -61,32 +90,7 @@
       <th scope="col">Average Loss</th>
       <td scope="col" id="avg-loss">-27.91 GBP</td>
       </tr>
-      <table class="table table-hover table-dark hidden black-border" id="table-2" >
-      <tr>
-      <th scope="col">Balance</th>
-      <td colspan="2" id="balance">8,606.83 GBP</td>
-      <th scope="col">Broker</th>
-      <td scope="col">Darwinex</td>
-      </tr>
-      <tr>
-      <th scope="row">Deposits</th>
-      <td colspan="2" id="deposits">6,214.12 GBP</td>
-      <th scope="col">Broker Server</th>
-      <td scope="col">Darwinex-Live</td>
-      </tr>
-      <tr>
-      <th scope="row">Withdrawals</th>
-      <td colspan="2">0.00 GBP</td>
-      <th scope="col">Leverage</th>
-      <td scope="col"><i style="font-size:24px" class="fa">&#xf023;</i></td>
-      </tr>
-      <tr>
-        <th scope="row"></th>
-        <td colspan="2"></td>
-        <th scope="col">Account Type</th>
-        <td scope="col"><i style="font-size:24px" class="fa">&#xf023;</i></td>
-      </tr>
-      </table>
+    </table>
     </div>
   </div>
 
